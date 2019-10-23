@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jan 30 14:31:51 2019
+
+@author: tarik
+"""
+
+def solution(A, K):
+    temp = A[0]
+    for i in range(K + 1):
+        A[i] = A[i - 1]
+    A[K + 1] = temp
+    
+def ArrayPrint(A, size):
+    for i in range(size):
+        print('%d' % A[i], end=" ")
+        
+def rightRotate(A, K):
+    for i in range(K):
+        solution(A, K)
